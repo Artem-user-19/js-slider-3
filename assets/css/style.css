@@ -1,0 +1,208 @@
+*{
+    font-size: 40px;
+}
+
+.slides {
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    top: 10%;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+.controls {
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    font-size: 30px;
+}
+
+.controls div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding: 0;
+}
+
+.controls__item.controls__pause {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.controls__item.controls__prev {
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+}
+
+.controls__item.controls__next {
+    position: absolute;
+    width: 5%;
+    height: 100%;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+}
+
+.controls div i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+    
+    padding: 0;
+}
+
+.fas.fa-pause, .fas.fa-play {
+    border: solid 1px white;
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.2s;
+}
+
+.fas.fa-chevron-right, .fas.fa-chevron-left {    
+    color: chocolate;
+}
+
+.indicators {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -10%);
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.indicators__item {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px 20px / 20px 20px;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+.indicators__item.active {
+    cursor: not-allowed;
+    border: #00bbbb 2px solid;
+    box-shadow: 0 0 20px white;
+}
+
+.slides__item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slides__item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slides__item {
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+}
+
+.slides__item.active a {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* @keyframes typing {
+    0%  {content: "";}
+    10% {content: "L"; color: rgba(255, 60, 60, 0.7);}
+    20% {content: "Le"; color: rgba(255, 60, 60, 0.7);}
+    30% {content: "Lea"; color: rgba(255, 60, 60, 0.7);}
+    40% {content: "Lear"; color: rgba(255, 60, 60, 0.7);}
+    50% {content: "Learn"; color: rgba(255, 60, 60, 0.7);}
+    60% {content: "Learn n"; color: rgba(255, 60, 60, 0.7);}
+    70% {content: "Learn no"; color: yellow;}
+    80% {content: "Learn now"; color: yellow;}
+    90% {content: "Learn now!";}
+}
+.slides__item.active a::before {
+    content: "";
+    animation: typing 2s infinite;
+}
+.slides__item.active {
+    --caret: orange;
+}
+.slides__item.active a::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+  } */
+
+.slide-button {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%,-10%);
+    
+    display: inline-block;
+    
+    padding: 1% 2% 1% 2%;
+    text-decoration: none;
+
+    font-size: 1em;
+    font-family: 'Montserrat','Arial';
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.slide-text-container {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    transform: translate(-10%, -10%);
+    
+    padding: 1vw;
+    width: 25vw;
+    height: 10%;
+    text-align: center;
+
+    display: inline-block;
+    font-size: 1em;
+    color: #ffffff;
+    font-family: 'Montserrat','Arial';
+    font-weight: bold;
+    border-radius: 10px;
+}
